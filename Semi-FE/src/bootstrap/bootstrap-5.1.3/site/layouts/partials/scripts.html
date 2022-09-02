@@ -1,0 +1,19 @@
+<template>
+	<div class="RegisterView">
+		<h1>SemiColon</h1>
+		<br/>
+		<form class="Register" @submit.prevent="doSubmit()">
+			<p>
+				<label for="memberEmailInput">이메일</label>
+				<input type="text" id="memberEmailInput" class="input_text" ref="memberEmailInput"
+               v-model.trim="memberEmail" placeholder="사용하실 이메일을 입력하세요." />
+			</p>
+			<p>
+				<label for="memberNicknameInput">닉네임</label>
+				<input type="text" id="memberNicknameInput" class="input_text" ref="memberNicknameInput"
+               v-model.trim="memberNickname" placeholder="사용하실 닉네임을 입력하세요." />
+			</p>
+			<p>
+				<label for="memberPasswordInput">비밀번호</label>
+				<input type="password" id="memberPasswordInput" class="input_text" ref="memberPasswordInput"
+               v-model.trim="memberPassword" placeholder="사용하실 비밀번호를 입력하세요." /
