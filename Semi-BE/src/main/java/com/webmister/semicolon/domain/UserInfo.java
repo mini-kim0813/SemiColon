@@ -54,9 +54,16 @@ public class UserInfo {
     private List<Comment> commentList = new ArrayList<Comment>();
 
     @Column
-    @OneToMany(mappedBy = "postFriendId", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "postFriendId", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<FriendMatch> friendMatchList = new ArrayList<FriendMatch>();
+
+    public void following(UserInfo userInfo){
+        FriendMatch friendMatch = FriendMatch.builder()
+                .postFriendId(this).receiveFriendId(userInfo)
+                .build();
+        this.friendMatchList.add(friendMatch);
+    }
 
     public UserInfo setPassword(String password) {
         this.password = password;

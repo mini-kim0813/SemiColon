@@ -1,12 +1,12 @@
 server:
   address: 0.0.0.0
-  port: 8080
+  port: 8081
 
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/snsTest?useSSL=false&characterEncoding=UTF-8
     username: root
-    password: Wjsgusals2@
+    password: Thfdwe08131!
   mvc:
     static-path-patten : /static/**
   resource:
@@ -17,7 +17,7 @@ spring:
 
   servlet:
     multipart:
-      location: Users/jeonhyeonmin/Desktop/imageFile
+      location: Users/kimtaemin/Desktop/imageFile
       maxFileSize: 200MB
       maxRequestSize: 200MB
   jpa:
